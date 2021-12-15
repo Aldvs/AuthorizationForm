@@ -30,14 +30,19 @@ class LoginViewController: UIViewController {
     // MARK: - IB Actions
     
     @IBAction func getLogInButton() {
+        
     }
     
     @IBAction func getUserNameAlert() {
-        showAlert(title: "Ooops!", message: "Your name is Andrew")
+        showAlert(title: "Here we go again!", message: "Your name is Andrew")
     }
     @IBAction func getPasswordAlert() {
-        showAlert(title: "Ooops!", message: "Your password is Password")
+        showAlert(title: "Here we go again!", message: "Your password is password")
     }
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+                userNameTextField.text = nil
+                passwordTextField.text = nil
+        }
 }
 
 // MARK: - Private Methods

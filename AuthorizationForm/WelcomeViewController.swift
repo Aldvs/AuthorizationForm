@@ -14,11 +14,9 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = welcome
+        welcomeLabel.text = "Welcome, " + welcome + "! \n \u{270c}"
     }
     
-    @IBAction func logOutAction() {
-        dismiss(animated: true)
+    @IBAction func logoutAction(_ sender: UIButton) {
     }
-
 }

@@ -96,9 +96,9 @@
         <!--Welcome View Controller-->
         <scene sceneID="VRi-gZ-U3q">
             <objects>
-                <viewController id="qpr-bN-651" customClass="WelcomeViewController" customModule="AuthorizationForm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qpr-bN-651" customClass="WelcomeViewController" customModule="AuthorizationForm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LCo-8j-Z9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oop-MH-Lop">
@@ -107,7 +107,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
                                 <connections>
-                                    <action selector="logOutAction" destination="qpr-bN-651" eventType="touchUpInside" id="S7s-vO-FNV"/>
+                                    <action selector="logoutAction:" destination="qpr-bN-651" eventType="touchUpInside" id="rmd-GB-q9b"/>
+                                    <segue destination="Cko-i7-rN9" kind="unwind" unwindAction="unwindFor:" id="rwp-6b-owb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsw-bg-aVA">
@@ -133,6 +134,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="el6-mV-XX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cko-i7-rN9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="789.375" y="97.183098591549296"/>
         </scene>
