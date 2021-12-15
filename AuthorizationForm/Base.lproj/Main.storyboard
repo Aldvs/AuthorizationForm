@@ -27,36 +27,43 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qts-kY-gK2">
                                         <rect key="frame" x="0.0" y="47" width="280" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="YWc-pB-ujq">
-                                <rect key="frame" x="20" y="174" width="280" height="69"/>
+                                <rect key="frame" x="20" y="174" width="280" height="67"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stz-ci-dKH">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="31"/>
-                                        <color key="tintColor" systemColor="systemIndigoColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Log In"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="qpr-bN-651" kind="presentation" id="NBO-w5-6wi"/>
+                                            <action selector="getLogInButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="uM3-bO-XYj"/>
+                                            <segue destination="qpr-bN-651" kind="presentation" id="8Et-3e-sYF"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="cOL-kf-HL9">
-                                        <rect key="frame" x="0.0" y="38" width="280" height="31"/>
+                                        <rect key="frame" x="0.0" y="37" width="280" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-ZU-j0N">
-                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="31"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="30"/>
+                                                <color key="tintColor" systemColor="linkColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Forgot Username?"/>
+                                                <state key="normal" title="Forgot User name?"/>
+                                                <connections>
+                                                    <action selector="getUserNameAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJt-5L-fLQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1w-4H-rQk">
-                                                <rect key="frame" x="143.5" y="0.0" width="136.5" height="31"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="143.5" y="0.0" width="136.5" height="30"/>
+                                                <color key="tintColor" systemColor="linkColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="getPasswordAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Mf-ok-vht"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -74,6 +81,13 @@
                             <constraint firstItem="YWc-pB-ujq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fhF-6A-mxZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotNameButton" destination="I0A-ZU-j0N" id="xSa-cl-uex"/>
+                        <outlet property="forgotPassButton" destination="z1w-4H-rQk" id="mot-qW-jKG"/>
+                        <outlet property="loginButton" destination="Stz-ci-dKH" id="O0t-Hg-Fto"/>
+                        <outlet property="passwordTextField" destination="Qts-kY-gK2" id="6Tn-mY-LTW"/>
+                        <outlet property="userNameTextField" destination="ire-53-WPJ" id="wPq-RB-jbX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,9 +103,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oop-MH-Lop">
                                 <rect key="frame" x="20" y="178.5" width="280" height="31"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutAction" destination="qpr-bN-651" eventType="touchUpInside" id="S7s-vO-FNV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsw-bg-aVA">
                                 <rect key="frame" x="20" y="70" width="280" height="38.5"/>
@@ -111,6 +128,9 @@
                             <constraint firstItem="tsw-bg-aVA" firstAttribute="leading" secondItem="wZB-pq-II1" secondAttribute="leading" constant="20" id="fPh-lm-zS2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="tsw-bg-aVA" id="Md2-73-kgG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="el6-mV-XX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,11 +138,11 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
