@@ -16,11 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var forgotNameButton: UIButton!
     
-    // MARK: Life Cycles Methods
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    //MARK: Public Properties
+    private let userName = "Andrew"
+    private let password = "password"
     
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let loginVC = segue.destination as! WelcomeViewController
         loginVC.welcome = userNameTextField.text
@@ -28,13 +28,12 @@ class LoginViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     // MARK: - IB Actions
-    
     @IBAction func getLogInButton() {
         
-        let autorizationData = ["username": "Andrew", "password": "password"]
         
         guard let inputUserText = userNameTextField.text, !inputUserText.isEmpty else {
             showAlert(title: "Error!", message: "Please, enter your username!")
@@ -51,10 +50,11 @@ class LoginViewController: UIViewController {
             return
         }
         
-        if autorizationData["username"] == inputUserText && autorizationData["password"] == inputPassText {
+        if userName == inputUserText && password == inputPassText {
             return
         } else {
             showAlert(title: "Wrong", message: "Username or password")
+            passwordTextField.text = ""
         }
     }
     
