@@ -16,6 +16,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var forgotPassButton: UIButton!
     @IBOutlet weak var forgotNameButton: UIButton!
     
+    let userData = UserData()
+    let userInfo = UserInformation.getUserInformation()
+    
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
