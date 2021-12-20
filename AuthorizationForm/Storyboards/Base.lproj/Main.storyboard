@@ -148,6 +148,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="UjD-mc-wMU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o5s-xa-0Q3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -163,7 +164,7 @@
         <!--Info-->
         <scene sceneID="NK7-pB-P7T">
             <objects>
-                <viewController id="Xp9-sY-7HK" sceneMemberID="viewController">
+                <viewController id="Xp9-sY-7HK" customClass="UserInfoViewController" customModule="AuthorizationForm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YVO-hM-DKJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="1697.1014492753625" y="806.91964285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--More Info View Controller-->
         <scene sceneID="Hc2-5W-lWa">
             <objects>
-                <viewController id="puw-9z-Z6c" sceneMemberID="viewController">
+                <viewController id="puw-9z-Z6c" customClass="MoreInfoViewController" customModule="AuthorizationForm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qel-Rs-CBo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
