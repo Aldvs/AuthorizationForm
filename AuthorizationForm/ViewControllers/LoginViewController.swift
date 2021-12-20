@@ -22,45 +22,16 @@ class LoginViewController: UIViewController {
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.welcomeUser = userNameTextField.text
     }
     
     // MARK: - IB Actions
     @IBAction func logInPressed() {
-        
-        guard let inputUserText = userNameTextField.text, !inputUserText.isEmpty else {
-            showAlert(title: "Empty login field", message: "Please, enter your login")
-            return
-        }
-        
-        if let _ = Double(inputUserText) {
-            showAlert(title: "Invalid syntax", message: "Please, don't use numbers in login field")
-            return
-        }
-        
-        guard let inputPassText = passwordTextField.text, !inputPassText.isEmpty else {
-            showAlert(title: "Empty password field", message: "Plaese, enter your password")
-            return
-        }
-        
-        if userName == inputUserText && password == inputPassText {
-            return
-        } else {
-            showAlert(title: "Invalid login or password", message: "Please, enter correct data")
-            passwordTextField.text = ""
-        }
     }
     
     @IBAction func forgotAutorizationData(_ sender: UIButton) {
-        sender.tag == 0
-            ? showAlert(title: "Here we go again!", message: "Your name is Andrew")
-            : showAlert(title: "Here we go again!", message: "Your password is password")
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-                userNameTextField.text = nil
-                passwordTextField.text = nil
         }
 }
 

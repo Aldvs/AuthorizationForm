@@ -18,7 +18,6 @@ class WelcomeViewController: UIViewController {
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = "Welcome, " + welcomeUser + "! \n \u{270c}"
     }
     
     // MARK: - IB Actions
