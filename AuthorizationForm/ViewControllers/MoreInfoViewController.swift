@@ -8,22 +8,15 @@
 import UIKit
 
 class MoreInfoViewController: UIViewController {
+    
+    @IBOutlet weak var moreInfoLabel: UILabel!
+    var user: UserData!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        moreInfoLabel.text = user.person.education + user.person.hobby
 
-        // Do any additional setup after loading the view.
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

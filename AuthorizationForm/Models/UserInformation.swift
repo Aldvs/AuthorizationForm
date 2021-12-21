@@ -7,21 +7,28 @@
 
 struct UserData {
     
-    let login = "Andrew"
-    let password = "password"
+    let login: String
+    let password: String
+    let person: Person
     
+    static func getUserData() -> UserData {
+        UserData(login: "Andrew", password: "password", person: .getPersonInformation())
+    }
 }
 
-struct UserInformation {
+struct Person {
     
     let name: String
     let surname: String
     let hobby: String
     let education: String
     
-    static func getUserInformation() -> UserInformation {
-        
-        UserInformation(name: "Андрей", surname: "Гоголь", hobby: "Спортзал", education: "Информационная безопасность")
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    static func getPersonInformation() -> Person {
+        Person(name: "Андрей", surname: "Гоголь", hobby: "Спортзал", education: "Информационная безопасность")
     }
     
 }

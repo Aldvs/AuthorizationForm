@@ -13,11 +13,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     
     // MARK: - Public Properties
-    var welcomeUser: String!
+    var user: UserData!
     
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        welcomeLabel.text = "Welcome" + user.person.fullName + "🤔"
     }
     
     // MARK: - IB Actions
