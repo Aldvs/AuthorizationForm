@@ -15,8 +15,11 @@ class MoreInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moreInfoLabel.text = user.person.education + user.person.hobby
-
-
+        moreInfoLabel.text = """
+                             Образование: \n\(user.person.education)
+                             
+                             Хобби: \n\(user.person.hobby)
+                             """
+        
     }
 }

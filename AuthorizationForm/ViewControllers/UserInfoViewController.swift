@@ -14,10 +14,9 @@ class UserInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tabBarItem.title = user.person.fullName
         self.title = user.person.fullName
-
-        // Do any additional setup after loading the view.
+        
     }
     
     // MARK: - Navigation
