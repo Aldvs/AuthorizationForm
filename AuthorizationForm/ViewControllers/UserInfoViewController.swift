@@ -9,9 +9,11 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
+    //MARK: - Public Properties
     var user: UserData!
     let personInfo = UserData.getUserData()
 
+    //MARK: - Life Cycle MEthods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarItem.title = user.person.fullName
