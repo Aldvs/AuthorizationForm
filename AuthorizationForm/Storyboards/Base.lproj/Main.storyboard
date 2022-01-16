@@ -132,7 +132,7 @@
                             <constraint firstItem="tsw-bg-aVA" firstAttribute="leading" secondItem="wZB-pq-II1" secondAttribute="leading" constant="20" id="fPh-lm-zS2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="hlW-75-E9e"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" id="hlW-75-E9e"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="tsw-bg-aVA" id="bhf-7h-5b0"/>
                     </connections>
@@ -222,11 +222,11 @@
             </objects>
             <point key="canvasLocation" x="2567" y="807"/>
         </scene>
-        <!--Item-->
+        <!--User Info-->
         <scene sceneID="3eC-u5-MOV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qHt-qo-O5e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wce-wd-43B"/>
+                    <tabBarItem key="tabBarItem" title="User Info" image="person.circle.fill" catalog="system" id="wce-wd-43B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gQc-tm-eqZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -243,6 +243,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

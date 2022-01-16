@@ -18,8 +18,6 @@ class WelcomeViewController: UIViewController {
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarItem.title = "Home"
-
         welcomeLabel.text = "Welcome, " + user.person.fullName + ", 🤔"
     }
     
