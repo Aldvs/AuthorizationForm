@@ -12,7 +12,11 @@ struct UserData {
     let person: Person
     
     static func getUserData() -> UserData {
-        UserData(login: "Andrew", password: "password", person: .getPersonInformation())
+        UserData(
+            login: "Andrew",
+            password: "password",
+            person: .getPersonInformation()
+        )
     }
 }
 
@@ -28,7 +32,12 @@ struct Person {
     }
     
     static func getPersonInformation() -> Person {
-        Person(name: "Андрей", surname: "Гоголь", hobby: "Спортзал", education: "Информационная безопасность")
+        Person(
+            name: "Андрей",
+            surname: "Гоголь",
+            hobby: "Спортзал",
+            education: "Информационная безопасность"
+        )
     }
     
 }
